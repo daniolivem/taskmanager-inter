@@ -8,6 +8,17 @@ package model;
  *
  * @author FARMACIA
  */
-public class TarefaPrioritaria {
-    
+public class TarefaPrioritaria extends Tarefa {
+//atributo extra pra n ficar igual tarefa
+    private String prioridade;
+//construtor e super
+    public TarefaPrioritaria(String titulo, String prioridade) {
+        super(titulo);
+        this.prioridade = prioridade;
+    }
+//metodo
+    @Override
+    public String toString() {
+        return super.toString() + " (Prioridade: " + prioridade + ")";
+    }
 }
